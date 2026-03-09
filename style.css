@@ -7,6 +7,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Ysabeau Infant', sans-serif;
+font-size:32px;
 }
 
 /* ========================================= */
@@ -391,69 +392,84 @@ overflow-x:hidden;
 }
 
 /* ========================================= */
-/* RESPONSIVIDADE MOBILE */
+/* MOBILE – MELHOR LEGIBILIDADE */
 /* ========================================= */
 
 @media (max-width:600px){
 
-/* melhora espaçamento superior */
+/* banner ocupa melhor a tela */
 
 .secao-banner{
-padding-top:40px;
-}
-
-/* foto maior */
-
-.container-foto{
-width:200px;
-}
-
-.foto-perfil{
-width:185px;
-}
-
-/* titulo maior */
-
-.logo-titulo{
-font-size:36px;
+padding:40px 15px;
 }
 
 /* container links ocupa quase toda tela */
 
 .container-links{
-width:90%;
+width:100%;
+max-width:100%;
+padding:0;
 }
 
-/* botões maiores */
+/* título maior */
+
+.logo-titulo{
+font-size:44px;
+}
+
+/* botões grandes */
 
 .secao-banner a{
 
-font-size:18px;
+font-size:22px;
 
-padding:16px;
+padding:20px;
+
+min-height:56px;
 
 }
 
 /* ícones maiores */
 
 .secao-banner a img{
-
-width:24px;
-
+width:26px;
 }
 
-/* estatísticas */
+/* foto perfil */
+
+.container-foto{
+width:210px;
+}
+
+.foto-perfil{
+width:195px;
+}
+
+/* título estatísticas */
 
 .titulo-estatisticas{
-font-size:36px;
+font-size:38px;
 }
 
-/* tabela menor para caber */
+/* tabela grande com scroll */
 
 .tabela-estatisticas{
 
-font-size:13px;
+font-size:18px;
 
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+/* células */
+
+.tabela-estatisticas th,
+.tabela-estatisticas td{
+padding:16px;
 }
 
 }
