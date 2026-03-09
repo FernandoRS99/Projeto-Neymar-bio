@@ -2,265 +2,226 @@
 /* RESET + FONTE PADRÃO DO SITE */
 /* ========================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: 'Ysabeau Infant', sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Ysabeau Infant', sans-serif;
 }
 
 /* ========================================= */
 /* SEÇÃO BANNER */
 /* ========================================= */
 
-.secao-banner {
+.secao-banner{
 
-    height: 100vh;
+min-height:100vh;
 
-    position: relative;
+position:relative;
 
-    overflow: hidden;
+display:flex;
 
-    display: flex;
+flex-direction:column;
 
-    flex-direction: column;
+align-items:center;
 
-    align-items: center;
+justify-content:center;
 
-    justify-content: center;
+text-align:center;
 
-    text-align: center;
-
-}
-
-/* ========================================= */
-/* ESTILO DO VÍDEO DE FUNDO */
-/* ========================================= */
-
-.secao-banner video {
-
-    position: absolute;
-    /* posiciona o vídeo dentro da seção */
-    width: 100%;
-    /* largura total */
-    height: 100%;
-    /* altura total */
-
-    object-fit: cover;
-    /* faz o vídeo preencher sem distorcer */
-
-    z-index: -1;
-    /* coloca o vídeo atrás do conteúdo */
+padding-bottom:60px;
 
 }
 
 /* ========================================= */
-/* CONTAINER DA FOTO COM HALO GRADIENTE */
+/* VÍDEO DE FUNDO */
 /* ========================================= */
 
-.container-foto {
+.secao-banner video{
 
-    width: 215px;
-    aspect-ratio: 1/1;
-    /* garante círculo perfeito */
-    margin-top: 60px;
-    /* espaço do topo */
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: linear-gradient(90deg, #ffdf00, #009c3b);
-}
+position:absolute;
 
-/* ========================================= */
-/* FOTO DO NEYMAR */
-/* ========================================= */
+top:0;
+left:0;
 
-.foto-perfil {
+width:100%;
+height:100%;
 
-    width: 200px;
-    aspect-ratio: 1/1;
-    /* mantém proporção */
+object-fit:cover;
 
-    border-radius: 50%;
-
-    object-fit: cover;
-    /* evita deformação da imagem */
-
-    display: block;
+z-index:-1;
 
 }
 
 /* ========================================= */
-/* TÍTULO NEYMAR */
+/* CONTAINER DA FOTO */
 /* ========================================= */
 
-.secao-banner h1 {
+.container-foto{
 
-    color: white;
-    /* texto branco */
+width:215px;
 
-    font-size: 40px;
-    /* tamanho do título */
+aspect-ratio:1/1;
 
-    margin-top: 20px;
-    /* espaço da foto */
+margin-top:60px;
 
-    text-shadow: 3px 3px 5px black;
-    /* sombra no texto */
+margin-bottom:20px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:linear-gradient(90deg,#ffdf00,#009c3b);
 
 }
 
 /* ========================================= */
-/* ÍCONE DE VERIFICADO */
+/* FOTO DO PERFIL */
+/* ========================================= */
+
+.foto-perfil{
+
+width:200px;
+
+aspect-ratio:1/1;
+
+border-radius:50%;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+/* ========================================= */
+/* TÍTULO */
+/* ========================================= */
+
+.logo-titulo{
+
+color:white;
+
+font-size:42px;
+
+margin-top:20px;
+
+position:relative;
+
+text-shadow:3px 3px 5px black;
+
+}
+
+/* ========================================= */
+/* TARJA GRADIENTE */
+/* ========================================= */
+
+.logo-titulo::before{
+
+content:"";
+
+position:absolute;
+
+bottom:2px;
+
+left:5px;
+
+width:43px;
+
+height:5px;
+
+border-radius:4px;
+
+background:linear-gradient(90deg,#ffdf00,#009c3b);
+
+}
+
+/* ========================================= */
+/* ÍCONE VERIFICADO */
 /* ========================================= */
 
 .icone-verificado{
 
 width:20px;
 
-margin-left:8px; /* espaço entre nome e ícone */
+margin-left:8px;
 
 vertical-align:middle;
 
 }
 
 /* ========================================= */
-/* BOTÕES DAS REDES SOCIAIS */
+/* CONTAINER LINKS */
 /* ========================================= */
 
-.secao-banner a {
+.container-links{
 
-    display: flex;
-    /* ativa flexbox */
+width:100%;
 
-    align-items: center;
-    /* centraliza verticalmente */
+max-width:768px;
 
-    width: 100%;
-    /* largura do botão */
+padding:0 20px;
 
-    padding: 12px;
+margin-top:40px;
 
-    margin-top: 15px;
+display:flex;
 
-    background-color: rgba(0, 0, 0, 0.6);
+flex-direction:column;
 
-    border-radius: 30px;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-family: Montserrat;
-
-    position: relative;
-    /* permite posicionar o ícone */
-
-}
-
-
-/* ========================================= */
-/* TEXTO DO BOTÃO */
-/* ========================================= */
-
-.secao-banner a span {
-
-    margin: auto;
-    /* centraliza o texto no botão */
-
-}
-
-
-/* ========================================= */
-/* ÍCONE DO BOTÃO */
-/* ========================================= */
-
-.secao-banner a img {
-
-    width: 20px;
-
-    position: absolute;
-
-    left: 15px;
-    /* mantém o ícone sempre à esquerda */
+align-items:center;
 
 }
 
 /* ========================================= */
-/* CONTAINER DOS LINKS */
+/* BOTÕES */
 /* ========================================= */
 
-.container-links {
+.secao-banner a{
 
-    width: 768px;
-    /* largura definida pelo layout */
+display:flex;
 
-    margin-top: 40px;
-    /* espaço entre título e botões */
+align-items:center;
 
-    display: flex;
+width:100%;
 
-    flex-direction: column;
-    /* botões um abaixo do outro */
+padding:12px;
 
-    align-items: center;
+margin-top:15px;
+
+background-color:rgba(0,0,0,0.6);
+
+border-radius:30px;
+
+color:white;
+
+text-decoration:none;
+
+font-family:Montserrat;
+
+position:relative;
 
 }
 
-/* ========================================= */
-/* TÍTULO DO BANNER */
-/* ========================================= */
+/* TEXTO BOTÃO */
 
-.logo-titulo {
+.secao-banner a span{
 
-    color: white;
-    /* texto branco */
-
-    font-size: 42px;
-    /* tamanho do texto */
-
-    margin-top: 20px;
-    /* espaço da foto */
-
-    position: relative;
-    /* necessário para usar ::before */
-
-    text-shadow: 3px 3px 5px black;
-    /* sombra no texto */
+margin:auto;
 
 }
 
-/* ========================================= */
-/* TARJA GRADIENTE ABAIXO DO "NE" */
-/* ========================================= */
+/* ÍCONE BOTÃO */
 
-.logo-titulo::before {
+.secao-banner a img{
 
-    content: "";
-    /* cria o pseudo-elemento */
+width:20px;
 
-    position: absolute;
+position:absolute;
 
-    bottom: 2px;
-    /* posição vertical */
-
-    left: 5px;
-    /* posição horizontal */
-
-    width: 43px;
-    /* largura da tarja */
-
-    height: 5px;
-    /* altura da tarja */
-
-    border-radius: 4px;
-
-    /* cores do gradiente Brasil */
-
-    background: linear-gradient(90deg, #ffdf00, #009c3b);
+left:15px;
 
 }
 
@@ -270,7 +231,7 @@ vertical-align:middle;
 
 .secao-estatisticas{
 
-height:100vh;
+min-height:100vh;
 
 background-image:url("./assets/imagem-de-fundo.jpg");
 
@@ -285,6 +246,8 @@ flex-direction:column;
 align-items:center;
 
 justify-content:center;
+
+padding:40px 20px;
 
 }
 
@@ -310,16 +273,23 @@ text-shadow:3px 5px 5px black;
 
 .tabela-estatisticas{
 
-background-color:rgba(0, 0, 0, 0.37);
+background-color:rgba(0,0,0,0.37);
 
 color:white;
 
 border-collapse:collapse;
 
 font-family:Montserrat;
-font-weight: bold;
+
+font-weight:bold;
+
+width:100%;
+
+max-width:900px;
 
 }
+
+/* CÉLULAS */
 
 .tabela-estatisticas th,
 .tabela-estatisticas td{
@@ -329,6 +299,8 @@ padding:20px;
 text-align:center;
 
 }
+
+/* IMAGENS TIMES */
 
 .tabela-estatisticas img{
 
@@ -340,10 +312,6 @@ vertical-align:middle;
 
 }
 
-/* ========================================= */
-/* PRIMEIRA COLUNA DA TABELA */
-/* ========================================= */
-
 .tabela-estatisticas td:first-child{
 
 display:flex;
@@ -352,29 +320,29 @@ align-items:center;
 
 gap:10px;
 
+justify-content:flex-start;
+
 }
 
-/* ========================================= */
+.tabela-estatisticas td:first-child img{
+width:30px;
+}
+
 /* LINHAS ALTERNADAS */
-/* ========================================= */
 
 .tabela-estatisticas tr:nth-child(even){
 
-background-color:rgba(255, 255, 255, 0.603);
+background-color:rgba(255,255,255,0.6);
+
 color:black;
-font-weight: bold;
 
 }
 
-/* ========================================= */
-/* CABEÇALHO DA TABELA */
-/* ========================================= */
+/* CABEÇALHO */
 
 .tabela-estatisticas th{
 
 background-color:rgba(0,0,0,0.8);
-
-font-weight:bold;
 
 }
 
@@ -382,7 +350,7 @@ font-weight:bold;
 /* RODAPÉ */
 /* ========================================= */
 
-.rodape{
+footer{
 
 background-color:#000;
 
@@ -396,10 +364,9 @@ font-family:Montserrat;
 
 }
 
+/* LINK */
 
-/* link do nome */
-
-.rodape a{
+footer a{
 
 color:#ffdf00;
 
@@ -407,8 +374,7 @@ text-decoration:none;
 
 }
 
-
-/* símbolo de marca registrada */
+/* MARCA */
 
 .marca{
 

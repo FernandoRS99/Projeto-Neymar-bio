@@ -2,7 +2,7 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Git Commit Push",
+      "label": "Deploy GitHub",
       "type": "shell",
       "command": "git add .; git commit -m '${input:commitMessage}'; git push",
       "problemMatcher": []
@@ -12,7 +12,7 @@
     {
       "id": "commitMessage",
       "type": "promptString",
-      "description": "Mensagem do commit"
+      "description": "Digite a mensagem do commit"
     }
   ]
 }
