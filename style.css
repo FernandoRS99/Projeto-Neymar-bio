@@ -9,12 +9,12 @@ box-sizing:border-box;
 }
 
 /* ========================================= */
-/* CONFIGURAÇÃO BASE */
+/* BASE */
 /* ========================================= */
 
 body{
 font-family:'Ysabeau Infant', sans-serif;
-font-size:20px;
+font-size:clamp(16px,1.2vw,20px);
 overflow-x:hidden;
 }
 
@@ -43,7 +43,7 @@ padding-bottom:60px;
 }
 
 /* ========================================= */
-/* VÍDEO DE FUNDO */
+/* VIDEO FUNDO */
 /* ========================================= */
 
 .secao-banner video{
@@ -63,12 +63,12 @@ z-index:-1;
 }
 
 /* ========================================= */
-/* CONTAINER DA FOTO */
+/* FOTO PERFIL */
 /* ========================================= */
 
 .container-foto{
 
-width:215px;
+width:clamp(180px,25vw,215px);
 
 aspect-ratio:1/1;
 
@@ -88,13 +88,9 @@ background:linear-gradient(90deg,#ffdf00,#009c3b);
 
 }
 
-/* ========================================= */
-/* FOTO DO PERFIL */
-/* ========================================= */
-
 .foto-perfil{
 
-width:200px;
+width:clamp(165px,23vw,200px);
 
 aspect-ratio:1/1;
 
@@ -107,14 +103,14 @@ display:block;
 }
 
 /* ========================================= */
-/* TÍTULO */
+/* TITULO */
 /* ========================================= */
 
 .logo-titulo{
 
 color:white;
 
-font-size:42px;
+font-size:clamp(30px,5vw,42px);
 
 margin-top:20px;
 
@@ -124,9 +120,7 @@ text-shadow:3px 3px 5px black;
 
 }
 
-/* ========================================= */
-/* TARJA GRADIENTE */
-/* ========================================= */
+/* TARJA */
 
 .logo-titulo::before{
 
@@ -149,12 +143,12 @@ background:linear-gradient(90deg,#ffdf00,#009c3b);
 }
 
 /* ========================================= */
-/* ÍCONE VERIFICADO */
+/* VERIFICADO */
 /* ========================================= */
 
 .icone-verificado{
 
-width:20px;
+width:clamp(16px,2vw,20px);
 
 margin-left:8px;
 
@@ -196,7 +190,7 @@ align-items:center;
 
 width:100%;
 
-padding:14px;
+padding:clamp(12px,2vw,16px);
 
 margin-top:15px;
 
@@ -212,7 +206,7 @@ font-family:Montserrat;
 
 position:relative;
 
-font-size:18px;
+font-size:clamp(16px,2.5vw,20px);
 
 }
 
@@ -226,7 +220,7 @@ margin:auto;
 
 .secao-banner a img{
 
-width:20px;
+width:clamp(18px,2vw,22px);
 
 position:absolute;
 
@@ -261,12 +255,12 @@ padding:40px 20px;
 }
 
 /* ========================================= */
-/* TÍTULO ESTATÍSTICAS */
+/* TITULO ESTATÍSTICAS */
 /* ========================================= */
 
 .titulo-estatisticas{
 
-font-size:48px;
+font-size:clamp(28px,4vw,48px);
 
 color:white;
 
@@ -296,6 +290,8 @@ width:100%;
 
 max-width:900px;
 
+font-size:clamp(14px,2vw,18px);
+
 }
 
 /* CÉLULAS */
@@ -303,18 +299,18 @@ max-width:900px;
 .tabela-estatisticas th,
 .tabela-estatisticas td{
 
-padding:20px;
+padding:clamp(10px,1.5vw,20px);
 
 text-align:center;
 
 }
 
-/* IMAGENS TIMES */
+/* ICONES TIMES */
 
 .tabela-estatisticas img{
 
-width:30px;
-height:30px;
+width:clamp(22px,2vw,30px);
+height:clamp(22px,2vw,30px);
 
 object-fit:contain;
 
@@ -322,7 +318,7 @@ margin-right:10px;
 
 }
 
-/* PRIMEIRA COLUNA (ícone + nome) */
+/* PRIMEIRA COLUNA */
 
 .tabela-estatisticas td:first-child{
 
@@ -372,8 +368,6 @@ font-family:Montserrat;
 
 }
 
-/* LINK */
-
 footer a{
 
 color:#ffdf00;
@@ -381,8 +375,6 @@ color:#ffdf00;
 text-decoration:none;
 
 }
-
-/* MARCA */
 
 .marca{
 
@@ -395,95 +387,42 @@ margin-left:2px;
 }
 
 /* ========================================= */
-/* MOBILE – MELHOR LEGIBILIDADE */
+/* MOBILE – TABELA COMPACTA */
 /* ========================================= */
 
 @media (max-width:600px){
 
-/* aumenta fonte geral */
-
-body{
-font-size:24px;
-}
-
-/* espaçamento banner */
-
-.secao-banner{
-padding:40px 15px;
-}
-
-/* container ocupa largura total */
-
-.container-links{
-width:100%;
-max-width:100%;
-padding:0;
-}
-
-/* título */
-
-.logo-titulo{
-font-size:40px;
-}
-
-/* botões maiores */
-
-.secao-banner a{
-
-font-size:22px;
-
-padding:18px;
-
-min-height:56px;
-
-}
-
-/* ícones maiores */
-
-.secao-banner a img{
-width:24px;
-}
-
-/* foto perfil */
-
-.container-foto{
-width:210px;
-}
-
-.foto-perfil{
-width:195px;
-}
-
-/* título estatísticas */
-
-.titulo-estatisticas{
-font-size:36px;
-}
-
-/* tabela mobile */
-
 .tabela-estatisticas{
 
-font-size:22px;   /* fonte maior */
+font-size:clamp(13px,3.2vw,16px);
 
 width:100%;
 
-max-width:100%;
-
-display:block;
-
-overflow-x:auto;
-
-white-space:nowrap;
-
 }
 
-/* células menores para compensar fonte maior */
+/* células mais compactas */
 
 .tabela-estatisticas th,
 .tabela-estatisticas td{
 
-padding:10px 8px;
+padding:6px 4px;
+
+}
+
+/* ícones menores para caber melhor */
+
+.tabela-estatisticas img{
+
+width:18px;
+height:18px;
+
+}
+
+/* diminui espaço entre ícone e texto */
+
+.tabela-estatisticas td:first-child{
+
+gap:6px;
 
 }
 
