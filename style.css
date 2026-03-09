@@ -305,10 +305,11 @@ text-align:center;
 .tabela-estatisticas img{
 
 width:30px;
+height:30px;
+
+object-fit:contain;
 
 margin-right:10px;
-
-vertical-align:middle;
 
 }
 
