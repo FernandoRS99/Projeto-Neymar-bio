@@ -6,7 +6,7 @@ box-sizing:border-box;
 
 body{
 font-family:'Ysabeau Infant', sans-serif;
-font-size:26px;
+font-size:20px;
 }
 
 /* ========================================= */
@@ -394,7 +394,7 @@ overflow-x:hidden;
 /* MOBILE – MELHOR LEGIBILIDADE */
 /* ========================================= */
 
-@media (max-width:800px){
+@media (max-width:600px){
 
 body{
 font-size:26px;
@@ -432,11 +432,6 @@ min-height:56px;
 
 }
 
-/* ícones maiores */
-
-.secao-banner a img{
-width:26px;
-}
 
 .secao-banner a span{
 font-size:1.2em;
