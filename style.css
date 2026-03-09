@@ -1,0 +1,421 @@
+/* ========================================= */
+/* RESET + FONTE PADRÃO DO SITE */
+/* ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Ysabeau Infant', sans-serif;
+}
+
+/* ========================================= */
+/* SEÇÃO BANNER */
+/* ========================================= */
+
+.secao-banner {
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+/* ========================================= */
+/* ESTILO DO VÍDEO DE FUNDO */
+/* ========================================= */
+
+.secao-banner video {
+
+    position: absolute;
+    /* posiciona o vídeo dentro da seção */
+    width: 100%;
+    /* largura total */
+    height: 100%;
+    /* altura total */
+
+    object-fit: cover;
+    /* faz o vídeo preencher sem distorcer */
+
+    z-index: -1;
+    /* coloca o vídeo atrás do conteúdo */
+
+}
+
+/* ========================================= */
+/* CONTAINER DA FOTO COM HALO GRADIENTE */
+/* ========================================= */
+
+.container-foto {
+
+    width: 215px;
+    aspect-ratio: 1/1;
+    /* garante círculo perfeito */
+    margin-top: 60px;
+    /* espaço do topo */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+}
+
+/* ========================================= */
+/* FOTO DO NEYMAR */
+/* ========================================= */
+
+.foto-perfil {
+
+    width: 200px;
+    aspect-ratio: 1/1;
+    /* mantém proporção */
+
+    border-radius: 50%;
+
+    object-fit: cover;
+    /* evita deformação da imagem */
+
+    display: block;
+
+}
+
+/* ========================================= */
+/* TÍTULO NEYMAR */
+/* ========================================= */
+
+.secao-banner h1 {
+
+    color: white;
+    /* texto branco */
+
+    font-size: 40px;
+    /* tamanho do título */
+
+    margin-top: 20px;
+    /* espaço da foto */
+
+    text-shadow: 3px 3px 5px black;
+    /* sombra no texto */
+
+}
+
+/* ========================================= */
+/* ÍCONE DE VERIFICADO */
+/* ========================================= */
+
+.icone-verificado{
+
+width:20px;
+
+margin-left:8px; /* espaço entre nome e ícone */
+
+vertical-align:middle;
+
+}
+
+/* ========================================= */
+/* BOTÕES DAS REDES SOCIAIS */
+/* ========================================= */
+
+.secao-banner a {
+
+    display: flex;
+    /* ativa flexbox */
+
+    align-items: center;
+    /* centraliza verticalmente */
+
+    width: 100%;
+    /* largura do botão */
+
+    padding: 12px;
+
+    margin-top: 15px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    border-radius: 30px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Montserrat;
+
+    position: relative;
+    /* permite posicionar o ícone */
+
+}
+
+
+/* ========================================= */
+/* TEXTO DO BOTÃO */
+/* ========================================= */
+
+.secao-banner a span {
+
+    margin: auto;
+    /* centraliza o texto no botão */
+
+}
+
+
+/* ========================================= */
+/* ÍCONE DO BOTÃO */
+/* ========================================= */
+
+.secao-banner a img {
+
+    width: 20px;
+
+    position: absolute;
+
+    left: 15px;
+    /* mantém o ícone sempre à esquerda */
+
+}
+
+/* ========================================= */
+/* CONTAINER DOS LINKS */
+/* ========================================= */
+
+.container-links {
+
+    width: 768px;
+    /* largura definida pelo layout */
+
+    margin-top: 40px;
+    /* espaço entre título e botões */
+
+    display: flex;
+
+    flex-direction: column;
+    /* botões um abaixo do outro */
+
+    align-items: center;
+
+}
+
+/* ========================================= */
+/* TÍTULO DO BANNER */
+/* ========================================= */
+
+.logo-titulo {
+
+    color: white;
+    /* texto branco */
+
+    font-size: 42px;
+    /* tamanho do texto */
+
+    margin-top: 20px;
+    /* espaço da foto */
+
+    position: relative;
+    /* necessário para usar ::before */
+
+    text-shadow: 3px 3px 5px black;
+    /* sombra no texto */
+
+}
+
+/* ========================================= */
+/* TARJA GRADIENTE ABAIXO DO "NE" */
+/* ========================================= */
+
+.logo-titulo::before {
+
+    content: "";
+    /* cria o pseudo-elemento */
+
+    position: absolute;
+
+    bottom: 2px;
+    /* posição vertical */
+
+    left: 5px;
+    /* posição horizontal */
+
+    width: 43px;
+    /* largura da tarja */
+
+    height: 5px;
+    /* altura da tarja */
+
+    border-radius: 4px;
+
+    /* cores do gradiente Brasil */
+
+    background: linear-gradient(90deg, #ffdf00, #009c3b);
+
+}
+
+/* ========================================= */
+/* SEÇÃO ESTATÍSTICAS */
+/* ========================================= */
+
+.secao-estatisticas{
+
+height:100vh;
+
+background-image:url("./assets/imagem-de-fundo.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+/* ========================================= */
+/* TÍTULO ESTATÍSTICAS */
+/* ========================================= */
+
+.titulo-estatisticas{
+
+font-size:48px;
+
+color:white;
+
+margin-bottom:40px;
+
+text-shadow:3px 5px 5px black;
+
+}
+
+/* ========================================= */
+/* TABELA */
+/* ========================================= */
+
+.tabela-estatisticas{
+
+background-color:rgba(0, 0, 0, 0.37);
+
+color:white;
+
+border-collapse:collapse;
+
+font-family:Montserrat;
+font-weight: bold;
+
+}
+
+.tabela-estatisticas th,
+.tabela-estatisticas td{
+
+padding:20px;
+
+text-align:center;
+
+}
+
+.tabela-estatisticas img{
+
+width:30px;
+
+margin-right:10px;
+
+vertical-align:middle;
+
+}
+
+/* ========================================= */
+/* PRIMEIRA COLUNA DA TABELA */
+/* ========================================= */
+
+.tabela-estatisticas td:first-child{
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+}
+
+/* ========================================= */
+/* LINHAS ALTERNADAS */
+/* ========================================= */
+
+.tabela-estatisticas tr:nth-child(even){
+
+background-color:rgba(255, 255, 255, 0.603);
+color:black;
+font-weight: bold;
+
+}
+
+/* ========================================= */
+/* CABEÇALHO DA TABELA */
+/* ========================================= */
+
+.tabela-estatisticas th{
+
+background-color:rgba(0,0,0,0.8);
+
+font-weight:bold;
+
+}
+
+/* ========================================= */
+/* RODAPÉ */
+/* ========================================= */
+
+.rodape{
+
+background-color:#000;
+
+color:#fff;
+
+text-align:center;
+
+padding:20px;
+
+font-family:Montserrat;
+
+}
+
+
+/* link do nome */
+
+.rodape a{
+
+color:#ffdf00;
+
+text-decoration:none;
+
+}
+
+
+/* símbolo de marca registrada */
+
+.marca{
+
+font-size:10px;
+
+vertical-align:super;
+
+margin-left:2px;
+
+}
