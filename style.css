@@ -1,13 +1,12 @@
-/* ========================================= */
-/* RESET + FONTE PADRÃO DO SITE */
-/* ========================================= */
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+body{
 font-family:'Ysabeau Infant', sans-serif;
-font-size:32px;
+font-size:26px;
 }
 
 /* ========================================= */
@@ -395,7 +394,11 @@ overflow-x:hidden;
 /* MOBILE – MELHOR LEGIBILIDADE */
 /* ========================================= */
 
-@media (max-width:600px){
+@media (max-width:800px){
+
+body{
+font-size:26px;
+}
 
 /* banner ocupa melhor a tela */
 
@@ -421,7 +424,7 @@ font-size:44px;
 
 .secao-banner a{
 
-font-size:22px;
+font-size:40px;
 
 padding:20px;
 
@@ -433,6 +436,10 @@ min-height:56px;
 
 .secao-banner a img{
 width:26px;
+}
+
+.secao-banner a span{
+font-size:1.2em;
 }
 
 /* foto perfil */
@@ -454,15 +461,9 @@ font-size:38px;
 /* tabela grande com scroll */
 
 .tabela-estatisticas{
-
-font-size:18px;
-
+font-size:0.9em;
 display:block;
-
 overflow-x:auto;
-
-white-space:nowrap;
-
 }
 
 /* células */
