@@ -102,6 +102,10 @@ border-radius:50%;
 
 background:linear-gradient(90deg,#ffdf00,#009c3b);
 
+position:relative;
+
+z-index:2;  /* garante que fique acima do vídeo */
+
 }
 
 .foto-perfil{
@@ -191,6 +195,16 @@ display:flex;
 flex-direction:column;
 
 align-items:center;
+
+}
+
+/* ========================================= */
+/* VIDEO*/
+/* ========================================= */
+
+.secao-banner video{
+
+filter:brightness(0.85);
 
 }
 
@@ -311,6 +325,7 @@ font-size:clamp(13px,1.4vw,16px);
 border-radius:8px;
 
 overflow:hidden;
+margin-top:10px;
 
 }
 
@@ -418,6 +433,7 @@ width:100%;
 
 font-size:clamp(12px,3vw,14px);
 
+
 }
 
 /* células compactas */
@@ -484,11 +500,15 @@ background-color:rgba(255,255,255,0.2);
 
 .resumo-carreira{
 
-color:white;
+color:#ffffff;            /* texto branco */
 
 font-family:Montserrat;
 
-margin-bottom:25px;
+font-weight:600;
+
+margin-top:-10px;         /* aproxima do título */
+
+margin-bottom:35px;       /* afasta da tabela */
 
 font-size:clamp(16px,2vw,20px);
 
@@ -496,7 +516,16 @@ text-align:center;
 
 text-shadow:2px 2px 4px black;
 
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:8px;
+
 }
+
 
 /* destaque gols */
 
