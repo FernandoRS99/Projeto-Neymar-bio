@@ -385,3 +385,75 @@ vertical-align:super;
 margin-left:2px;
 
 }
+
+body{
+overflow-x:hidden;
+}
+
+/* ========================================= */
+/* RESPONSIVIDADE MOBILE */
+/* ========================================= */
+
+@media (max-width:600px){
+
+/* melhora espaçamento superior */
+
+.secao-banner{
+padding-top:40px;
+}
+
+/* foto maior */
+
+.container-foto{
+width:200px;
+}
+
+.foto-perfil{
+width:185px;
+}
+
+/* titulo maior */
+
+.logo-titulo{
+font-size:36px;
+}
+
+/* container links ocupa quase toda tela */
+
+.container-links{
+width:90%;
+}
+
+/* botões maiores */
+
+.secao-banner a{
+
+font-size:18px;
+
+padding:16px;
+
+}
+
+/* ícones maiores */
+
+.secao-banner a img{
+
+width:24px;
+
+}
+
+/* estatísticas */
+
+.titulo-estatisticas{
+font-size:36px;
+}
+
+/* tabela menor para caber */
+
+.tabela-estatisticas{
+
+font-size:13px;
+
+}
+
+}
