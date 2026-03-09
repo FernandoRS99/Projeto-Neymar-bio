@@ -437,21 +437,24 @@ margin-left:2px;
 
 @media (max-width:600px){
 
+/* corrigir deslocamento da tabela no mobile */
+
 .tabela-estatisticas{
 
 width:100%;
 
-font-size:clamp(12px,3vw,14px);
+margin-left:0;
 
+margin-right:0;
 
 }
 
-/* células compactas */
+/* reduzir espaço lateral das células */
 
 .tabela-estatisticas th,
 .tabela-estatisticas td{
 
-padding:4px 3px;
+padding:4px 2px;
 
 }
 
@@ -471,6 +474,12 @@ margin-right:4px;
 .tabela-estatisticas th{
 
 white-space:nowrap;
+
+}
+
+.secao-estatisticas{
+
+padding:20px 0.2px;
 
 }
 
