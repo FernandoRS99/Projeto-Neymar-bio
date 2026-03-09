@@ -14,8 +14,22 @@ box-sizing:border-box;
 
 body{
 font-family:'Ysabeau Infant', sans-serif;
-font-size:clamp(16px,1.2vw,20px);
+font-size:clamp(14px,0.8vw,16px);
 overflow-x:hidden;
+}
+
+/* ========================================= */
+/* CONTAINER PADRÃO DO SITE */
+/* ========================================= */
+
+.container-principal{
+
+max-width:1100px;
+
+margin:0 auto;
+
+padding:0 20px;
+
 }
 
 /* ========================================= */
@@ -60,6 +74,8 @@ object-fit:cover;
 
 z-index:-1;
 
+pointer-events:none;
+
 }
 
 /* ========================================= */
@@ -68,7 +84,7 @@ z-index:-1;
 
 .container-foto{
 
-width:clamp(180px,25vw,215px);
+width:clamp(180px,25vw,210px);
 
 aspect-ratio:1/1;
 
@@ -90,7 +106,7 @@ background:linear-gradient(90deg,#ffdf00,#009c3b);
 
 .foto-perfil{
 
-width:clamp(165px,23vw,200px);
+width:clamp(165px,23vw,195px);
 
 aspect-ratio:1/1;
 
@@ -110,7 +126,7 @@ display:block;
 
 color:white;
 
-font-size:clamp(30px,5vw,42px);
+font-size:clamp(26px,3vw,38px);
 
 margin-top:20px;
 
@@ -164,7 +180,7 @@ vertical-align:middle;
 
 width:100%;
 
-max-width:768px;
+max-width:700px;
 
 padding:0 20px;
 
@@ -206,7 +222,7 @@ font-family:Montserrat;
 
 position:relative;
 
-font-size:clamp(16px,2.5vw,20px);
+font-size:clamp(15px,1.8vw,18px);
 
 }
 
@@ -260,7 +276,7 @@ padding:40px 20px;
 
 .titulo-estatisticas{
 
-font-size:clamp(28px,4vw,48px);
+font-size:clamp(26px,3vw,40px);
 
 color:white;
 
@@ -288,9 +304,13 @@ font-weight:bold;
 
 width:100%;
 
-max-width:900px;
+max-width:850px;
 
-font-size:clamp(14px,2vw,18px);
+font-size:clamp(13px,1.4vw,16px);
+
+border-radius:8px;
+
+overflow:hidden;
 
 }
 
@@ -299,7 +319,7 @@ font-size:clamp(14px,2vw,18px);
 .tabela-estatisticas th,
 .tabela-estatisticas td{
 
-padding:clamp(10px,1.5vw,20px);
+padding:clamp(8px,1.3vw,16px);
 
 text-align:center;
 
@@ -309,12 +329,12 @@ text-align:center;
 
 .tabela-estatisticas img{
 
-width:clamp(22px,2vw,30px);
-height:clamp(22px,2vw,30px);
+width:clamp(20px,2vw,26px);
+height:clamp(20px,2vw,26px);
 
 object-fit:contain;
 
-margin-right:10px;
+margin-right:8px;
 
 }
 
@@ -326,7 +346,7 @@ display:flex;
 
 align-items:center;
 
-gap:10px;
+gap:8px;
 
 justify-content:flex-start;
 
@@ -346,7 +366,7 @@ color:black;
 
 .tabela-estatisticas th{
 
-background-color:rgba(0,0,0,0.8);
+background-color:rgba(0,0,0,0.85);
 
 }
 
@@ -392,13 +412,11 @@ margin-left:2px;
 
 @media (max-width:600px){
 
-/* tabela ocupa toda largura da tela */
-
 .tabela-estatisticas{
 
 width:100%;
 
-font-size:clamp(12px,3vw,15px);
+font-size:clamp(12px,3vw,14px);
 
 }
 
@@ -408,16 +426,6 @@ font-size:clamp(12px,3vw,15px);
 .tabela-estatisticas td{
 
 padding:4px 3px;
-
-text-align:center;
-
-}
-
-/* primeira coluna (times) */
-
-.tabela-estatisticas td:first-child{
-
-text-align:left;
 
 }
 
@@ -430,8 +438,6 @@ height:16px;
 
 margin-right:4px;
 
-vertical-align:middle;
-
 }
 
 /* evita quebra estranha */
@@ -440,8 +446,86 @@ vertical-align:middle;
 
 white-space:nowrap;
 
-font-size:clamp(11px,2.8vw,14px);
+}
 
 }
+
+/* ========================================= */
+/* MELHORIAS VISUAIS DA TABELA */
+/* ========================================= */
+
+/* ========================================= */
+/* LINHA TOTAL DA TABELA */
+/* ========================================= */
+
+.linha-total{
+
+background-color:#000;   /* fundo preto */
+
+color:#fff;              /* texto branco */
+
+font-weight:bold;        /* fonte negrito */
+
+}
+
+
+.linha-total td:nth-child(4){
+
+color:#000;
+
+}
+/* hover nas linhas */
+
+.tabela-estatisticas tbody tr:hover{
+
+background-color:rgba(255,255,255,0.2);
+
+}
+
+.resumo-carreira{
+
+color:white;
+
+font-family:Montserrat;
+
+margin-bottom:25px;
+
+font-size:clamp(16px,2vw,20px);
+
+text-align:center;
+
+text-shadow:2px 2px 4px black;
+
+}
+
+/* destaque gols */
+
+.estat-gols{
+color:#ffdf00;
+font-weight:700;
+}
+
+/* destaque seleção */
+
+.linha-selecao{
+background:rgba(255,223,0,0.15);
+}
+
+/* hover suave */
+
+.tabela-estatisticas tbody tr{
+transition:0.25s;
+}
+
+/* ========================================= */
+/* DESTAQUE COLUNA GOLS */
+/* ========================================= */
+
+.tabela-estatisticas td:nth-child(4),
+.tabela-estatisticas th:nth-child(4){
+
+color:#ffdf00;
+
+font-weight:700;
 
 }
