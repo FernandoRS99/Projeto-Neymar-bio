@@ -367,6 +367,16 @@ justify-content:flex-start;
 
 }
 
+/* coluna Temporadas*/
+/* evita quebra na coluna de temporadas */
+
+.tabela-estatisticas td:nth-child(2),
+.tabela-estatisticas th:nth-child(2){
+
+white-space:nowrap;
+
+}
+
 /* LINHAS ALTERNADAS */
 
 .tabela-estatisticas tr:nth-child(even){
