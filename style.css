@@ -387,42 +387,60 @@ margin-left:2px;
 }
 
 /* ========================================= */
-/* MOBILE – TABELA COMPACTA */
+/* MOBILE – TABELA RESPONSIVA */
 /* ========================================= */
 
 @media (max-width:600px){
 
-.tabela-estatisticas{
+/* tabela ocupa toda largura da tela */
 
-font-size:clamp(13px,3.2vw,16px);
+.tabela-estatisticas{
 
 width:100%;
 
+font-size:clamp(12px,3vw,15px);
+
 }
 
-/* células mais compactas */
+/* células compactas */
 
 .tabela-estatisticas th,
 .tabela-estatisticas td{
 
-padding:6px 4px;
+padding:4px 3px;
+
+text-align:center;
 
 }
 
-/* ícones menores para caber melhor */
-
-.tabela-estatisticas img{
-
-width:18px;
-height:18px;
-
-}
-
-/* diminui espaço entre ícone e texto */
+/* primeira coluna (times) */
 
 .tabela-estatisticas td:first-child{
 
-gap:6px;
+text-align:left;
+
+}
+
+/* ícones menores */
+
+.tabela-estatisticas img{
+
+width:16px;
+height:16px;
+
+margin-right:4px;
+
+vertical-align:middle;
+
+}
+
+/* evita quebra estranha */
+
+.tabela-estatisticas th{
+
+white-space:nowrap;
+
+font-size:clamp(11px,2.8vw,14px);
 
 }
 
