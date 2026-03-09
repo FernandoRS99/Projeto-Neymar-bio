@@ -1,12 +1,21 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 }
 
+/* ========================================= */
+/* CONFIGURAÇÃO BASE */
+/* ========================================= */
+
 body{
 font-family:'Ysabeau Infant', sans-serif;
 font-size:20px;
+overflow-x:hidden;
 }
 
 /* ========================================= */
@@ -187,7 +196,7 @@ align-items:center;
 
 width:100%;
 
-padding:12px;
+padding:14px;
 
 margin-top:15px;
 
@@ -203,14 +212,14 @@ font-family:Montserrat;
 
 position:relative;
 
+font-size:18px;
+
 }
 
 /* TEXTO BOTÃO */
 
 .secao-banner a span{
-
 margin:auto;
-
 }
 
 /* ÍCONE BOTÃO */
@@ -313,6 +322,8 @@ margin-right:10px;
 
 }
 
+/* PRIMEIRA COLUNA (ícone + nome) */
+
 .tabela-estatisticas td:first-child{
 
 display:flex;
@@ -323,10 +334,6 @@ gap:10px;
 
 justify-content:flex-start;
 
-}
-
-.tabela-estatisticas td:first-child img{
-width:30px;
 }
 
 /* LINHAS ALTERNADAS */
@@ -387,27 +394,25 @@ margin-left:2px;
 
 }
 
-body{
-overflow-x:hidden;
-}
-
 /* ========================================= */
 /* MOBILE – MELHOR LEGIBILIDADE */
 /* ========================================= */
 
 @media (max-width:600px){
 
+/* aumenta fonte geral */
+
 body{
-font-size:26px;
+font-size:24px;
 }
 
-/* banner ocupa melhor a tela */
+/* espaçamento banner */
 
 .secao-banner{
 padding:40px 15px;
 }
 
-/* container links ocupa quase toda tela */
+/* container ocupa largura total */
 
 .container-links{
 width:100%;
@@ -415,27 +420,28 @@ max-width:100%;
 padding:0;
 }
 
-/* título maior */
+/* título */
 
 .logo-titulo{
-font-size:44px;
+font-size:40px;
 }
 
-/* botões grandes */
+/* botões maiores */
 
 .secao-banner a{
 
-font-size:40px;
+font-size:22px;
 
-padding:20px;
+padding:18px;
 
 min-height:56px;
 
 }
 
+/* ícones maiores */
 
-.secao-banner a span{
-font-size:1.2em;
+.secao-banner a img{
+width:24px;
 }
 
 /* foto perfil */
@@ -451,22 +457,34 @@ width:195px;
 /* título estatísticas */
 
 .titulo-estatisticas{
-font-size:38px;
+font-size:36px;
 }
 
-/* tabela grande com scroll */
+/* tabela mobile */
 
 .tabela-estatisticas{
-font-size:0.9em;
+
+font-size:22px;   /* fonte maior */
+
+width:100%;
+
+max-width:100%;
+
 display:block;
+
 overflow-x:auto;
+
+white-space:nowrap;
+
 }
 
-/* células */
+/* células menores para compensar fonte maior */
 
 .tabela-estatisticas th,
 .tabela-estatisticas td{
-padding:16px;
+
+padding:10px 8px;
+
 }
 
 }
